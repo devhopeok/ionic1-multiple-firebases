@@ -24,44 +24,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // remove the status bar on iOS or change it to use white instead of dark colors.
       StatusBar.styleDefault();
     }
-
-    var firstConfig = {
-      apiKey: "AIzaSyAo5gbVRdIDcUhMGTMhBvD-0SHeYQ7OMOY",
-      authDomain: "ionic-test-1-12a34.firebaseapp.com",
-      databaseURL: "https://ionic-test-1-12a34.firebaseio.com",
-      projectId: "ionic-test-1-12a34",
-      storageBucket: "ionic-test-1-12a34.appspot.com",
-      messagingSenderId: "126509417004",
-      appId: "1:126509417004:web:3198ba03be60a2adafc789"
-    };
-    // Initialize Firebase
-    var firstFirebase = firebase.initializeApp(firstConfig, "first");
-
-    var database1 = firstFirebase.database(firstFirebase);
-    var ref1 = database1.ref();
-    ref1.once("value")
-      .then(function(snapshot) {
-        console.log("first database", snapshot.val());
-      })
-
-    var secondConfig = {
-      apiKey: "AIzaSyBaZgkdt9YQvSzRrCfxf5orAyD-wC052xQ",
-      authDomain: "ionic-test-2-5c7c0.firebaseapp.com",
-      databaseURL: "https://ionic-test-2-5c7c0.firebaseio.com",
-      projectId: "ionic-test-2-5c7c0",
-      storageBucket: "ionic-test-2-5c7c0.appspot.com",
-      messagingSenderId: "1088836971260",
-      appId: "1:1088836971260:web:6af48b916d1e0ac03ec579"
-    };
-    // Initialize Firebase
-    var secondFirebase = firebase.initializeApp(secondConfig, "second");
-
-    var database2 = secondFirebase.database(secondFirebase);
-    var ref2 = database2.ref();
-    ref2.once("value")
-      .then(function(snapshot) {
-        console.log("second database", snapshot.val());
-      })
   });
 })
 
